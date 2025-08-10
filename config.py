@@ -5,19 +5,19 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "21740783")  # ⚠️ Required
-    API_HASH  = os.environ.get("API_HASH", "a5dc7fec8302615f5b441ec5e238cd46") # ⚠️ Required
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6610201435:AAHEv2YoM2ZEtlEdqjilv9mZGjT9Uzzrntw") # ⚠️ Required
-    FORCE_SUB = os.environ.get('FORCE_SUB', 'Anime_warrior_tamil') # ⚠️ Required
+    API_ID    = os.environ.get("API_ID", "")  # ⚠️ Required
+    API_HASH  = os.environ.get("API_HASH", "") # ⚠️ Required
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") # ⚠️ Required
+    FORCE_SUB = os.environ.get('FORCE_SUB', '') # ⚠️ Required
     AUTH_CHANNEL = int(FORCE_SUB) if FORCE_SUB and id_pattern.search(
     FORCE_SUB) else None
    
     # database config
-    DB_URL  = os.environ.get("DB_URL", "mongodb+srv://Speedwolf1:speedwolf24689@cluster0.rgfywsf.mongodb.net/")  # ⚠️ Required
-    DB_NAME  = os.environ.get("DB_NAME","Speedwolf1") 
+    DB_URL  = os.environ.get("DB_URL", "")  # ⚠️ Required
+    DB_NAME  = os.environ.get("DB_NAME","") 
 
     # Other Configs 
-    ADMIN = [6299192020, 6693549185, 6121610691, 7035627523] # ⚠️ Required
+    ADMIN = [] # ⚠️ Required
     LOG_CHANNEL = os.environ.get('LOG_CHANNEL', None) # ⚠️ Required
     BOT_UPTIME = BOT_UPTIME  = time.time()
     START_PIC = os.environ.get("START_PIC", "https://graph.org/file/15e82d7e665eccc8bd9c5.jpg")
